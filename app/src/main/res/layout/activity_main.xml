@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_backgroundImage"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:src="@drawable/white_corner"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintDimensionRatio="5:6.7"/>-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:src="@drawable/img_bar"-->
+<!--        app:layout_constraintDimensionRatio="111:2"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"/>-->
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ပို့ဆောင်မှုစနစ်"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_delivery"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/delivery"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tvShopDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Shop Delivery"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintLeft_toRightOf="@+id/iv_delivery"/>
+
+    <TextView
+        android:id="@+id/tvPhoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09458484854"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvShopDelivery"
+        app:layout_constraintLeft_toRightOf="@+id/iv_delivery"/>
+
+    <TextView
+        android:id="@+id/tvChooseAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ပြန်ရွေးရန်"
+        android:padding="5dp"
+        android:textColor="@color/blue"
+        android:textSize="16sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rvDate"
+       tools:listitem="@layout/date_item"
+       tools:itemCount="3"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       android:layout_margin="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/iv_delivery"/>
+
+    <TextView
+        android:id="@+id/tvDeliveryTime"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:text="ပို့ဆောင်ရန် အချိန် (အိမ်အရောက်)"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/rvDate"/>
+
+
+       <androidx.recyclerview.widget.RecyclerView
+           tools:itemCount="3"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+           android:layout_marginLeft="10dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginTop="10dp"
+           android:id="@+id/rvTime"
+           tools:listitem="@layout/time_item"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintTop_toBottomOf="@id/tvDeliveryTime"/>
+
+
+    <TextView
+        android:padding="5dp"
+        android:id="@+id/tvService"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="အခြားရရှိနိုင်သော ဝန်ဆောင်မှုများ"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/rvTime"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:itemCount="2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvDeliver"
+        tools:listitem="@layout/time_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvService"/>
+
+    <com.google.android.material.button.MaterialButton
+        app:icon="@drawable/ic_save"
+        android:id="@+id/btn_Button"
+        app:iconGravity="textStart"
+        app:cornerRadius="10dp"
+        android:backgroundTint="@color/blue"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:text="ပို့ဆောင်မှုစနစ် ထည့်ပြီးပါပြီ"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDeliver"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
