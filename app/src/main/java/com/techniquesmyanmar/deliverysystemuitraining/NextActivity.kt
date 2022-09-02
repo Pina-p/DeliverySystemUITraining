@@ -8,8 +8,7 @@ import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.techniquesmyanmar.deliverysystemuitraining.databinding.ActivityNextBinding
 import com.techniquesmyanmar.deliverysystemuitraining.model.DeliveryCompany
-import com.techniquesmyanmar.deliverysystemuitraining.model.Time
-import com.techniquesmyanmar.filter.DeliComAdapter
+import com.techniquesmyanmar.deliverysystemuitraining.adapter.DeliComAdapter
 import java.time.LocalDate
 
 class NextActivity : AppCompatActivity() {

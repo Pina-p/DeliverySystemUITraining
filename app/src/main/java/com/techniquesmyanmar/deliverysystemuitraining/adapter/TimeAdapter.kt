@@ -1,15 +1,8 @@
-package com.techniquesmyanmar.filter
+package com.techniquesmyanmar.deliverysystemuitraining.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View.inflate
 import android.view.ViewGroup
-import android.widget.RadioButton
-import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.techniquesmyanmar.deliverysystemuitraining.R
-import com.techniquesmyanmar.deliverysystemuitraining.databinding.ActivityMainBinding.inflate
 import com.techniquesmyanmar.deliverysystemuitraining.databinding.TimeItemBinding
 import com.techniquesmyanmar.deliverysystemuitraining.model.Time
 
